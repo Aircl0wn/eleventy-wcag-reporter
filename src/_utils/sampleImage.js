@@ -1,14 +1,13 @@
 const fs = require("fs"); 
 
-function sampleImage(id, report) {
-  const expectedFile = `./src/reports/${report}/images/${id}.png`;
+function sampleImage(imageFile, report) {
+  const expectedFile = `./src/reports/${report}/images/${imageFile}`;
   
   if (fs.existsSync(expectedFile)) {
-    return `images/${id}.png`;
+    return `images/${imageFile}`;
   } else {
     return "../example/images/default-screenshot.png";
   }
 }
 
 module.exports = sampleImage;
-
