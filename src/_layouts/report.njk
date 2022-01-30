@@ -124,20 +124,23 @@ layout: base
             </dd>
           </div>
           <div>
+            <dt>{{ translations.sample[language] }}: </dt>
+            {% if issue.data.sample == "all" %}
+            <dd></dd>
+            <dd><a class="wcag-link" href="#sample">{{ translations.all_pages[language] }}</a></dd>
+            {% else %}
+              {% for sample in issue.data.sample %}               
+                <dd><a class="wcag-link" href="#{{ sample }}">{{ sample }}</a></dd>
+              {% endfor %}
+            {% endif %}
+          </div>
+          <div>
             <dt>{{ translations.difficulty[language] }}: </dt>
             <dd>{{ issue.data.difficulty }}</a></dd>
           </div>
           <div>
             <dt>{{ translations.severity[language] }}: </dt>
             <dd>{{ issue.data.severity }}</dd>
-          </div>
-          <div>
-            <dt>{{ translations.sample[language] }}: </dt>
-            {% if issue.data.sample == "all" %}
-            <dd>{{ translations.all_pages[language] }}</dd>
-            {% else %}
-            <dd><a href="#{{ issue.data.sample }}">{{ issue.data.sample }}</a></dd>
-            {% endif %}
           </div>
         </dl>
       </div>
