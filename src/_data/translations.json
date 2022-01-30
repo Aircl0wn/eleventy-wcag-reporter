@@ -191,6 +191,22 @@
     "fi": "Tulokset periaatteittain",
     "de": "Ergebnisse je Prinzip"
   },
+  "passed": {
+    "en": "Passed",
+    "nl": "Voldoende",
+    "pt-br": "Aprovado",
+    "es": "Aprobado",
+    "fi": "Hyväksytty",
+    "de": "Erfolgreich"
+  },
+  "failed": {
+    "en": "Failed",
+    "nl": "Onvoldoende",
+    "pt-br": "Falha",
+    "es": "Fallido",
+    "fi": "Epäonnistunut",
+    "de": "Erfolglos"
+  },
   "total": {
     "en": "Total",
     "nl": "Totaal",
