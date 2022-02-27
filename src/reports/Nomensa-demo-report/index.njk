@@ -1,16 +1,18 @@
 ---
 layout: report
 tags: reports
-title: The Example Company
+title: Nomensa Demo Report
 language: en
 evaluation:
-  evaluator: V. van Gogh
-  commissioner: The Example Company
+  evaluator: R. Hendirks
+  QualityAssurance: R. Hendriks
+  commissioner: Client Company Ltd.
   target: WCAG 2.1, Level AA
   targetLevel: AA
   targetWcagVersion: 2.1
-  date: June 21, 2021
-  special requirements: Please also list accessibility problems that are not conformance failures
+  date: January 1, 2022
+  dateQA: January 1, 2022
+  special requirements: Please also list accessibility problems that are not conformance failures (best practices).
 scope:
   - All pages on example.com
 out_of_scope:
@@ -30,13 +32,25 @@ technologies:
   - JavaScript
   - WAI-ARIA
   - SVG
+barrierscore:
+  keyboard: 15
+  magnification: 0
+  screenreader: 0
+  cognitive: 0
 sample:
   - title: Homepage
     id: homepage
     url: https://example.com
     description: The homepage of Example Company.
+    screenshot: 001.jpg
   - title: Blog post
     id: blog-post
     url: https://example.com/blog/example-post
     description: An example of a blog post
+    screenshot: 002.jpg
+  - title: Contact page
+    id: contact
+    url: https://example.com/contact
+    description: Contact page with form
+    screenshot: 003.jpg
 ---

@@ -21,13 +21,11 @@
   },
   "homepage": "https://github.com/hidde/eleventy-wcag-reporter#readme",
   "dependencies": {
-    "@code-blocks/charts": "^0.1.9",
-    "@code-blocks/eleventy-plugin": "^0.1.8",
-    "@code-blocks/prism": "^0.1.8",
     "eleventy-plugin-markdown-shortcode": "^1.1.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
     "copy": "^0.3.2",
     "fs": "^0.0.1-security",
     "open-editor": "^4.0.0",

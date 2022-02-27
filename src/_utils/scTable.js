@@ -55,12 +55,12 @@ function scTable(allIssues, language, targetLevel, targetWcagVersion) {
         <td>${totals.robust - robust.length} ${translations["of"][language]} ${totals.robust} </td>
         <td>${robust.length} ${translations["of"][language]} ${totals.robust} </td>
     </tr>
-    <tr>
+    <tr class="sc-table-totals">
         <td>${translations["total"][language]}</td>
         <td>${totalConforming} ${translations["of"][language]} ${totals.all}</td>
         <td>${totalNotConforming} ${translations["of"][language]} ${totals.all}</td>
     </tr>
-    <tbody>
+    </tbody>
     </table>
   `;
 }

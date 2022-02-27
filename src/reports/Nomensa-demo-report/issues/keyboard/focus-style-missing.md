@@ -1,16 +1,13 @@
 ---
-sc: 2.4.7
-severity: High
-difficulty: Low
 title: Focus style missing
+group: keyboard
+sc: 2.4.7
+impact: High
 sample: all
 ---
 
-<figure>
-
-![alt text](images/default-screenshot.png) 
-
-</figure>
+![test](images/001.jpg)
+![alt text](images/002.jpg)
 
 #### Problem
 

@@ -2,8 +2,9 @@
 sc: 2.1.1
 severity: High
 difficulty: High
-title: Main menu does not work with keyboard
-sample: blog-post
+title: Main menu does not work with keyboard 2
+sample: 
+    - blog-post
 ---
 
 #### Problem

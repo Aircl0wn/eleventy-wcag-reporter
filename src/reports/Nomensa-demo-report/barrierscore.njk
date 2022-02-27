@@ -1,0 +1,31 @@
+<p>
+    {{ translations["barrierscore_explanation"][language] }}
+</p>
+<span class="barrier-score">
+    {{ barrierscore.keyboard + barrierscore.magnification + barrierscore.screenreader + barrierscore.cognitive }} %
+</span>
+
+<div class="table-wrap" tabindex="0">
+    <table aria-label="{{ translations["barrierscore_table_label"][language] }}">
+        <thead>
+            <tr>
+                <th>{{ translations["barrierscore_keyboard"][language] }}</th>
+                <th>{{ translations["barrierscore_magnification"][language] }}</th>
+                <th>{{ translations["barrierscore_screenreader"][language] }}</th>
+                <th>{{ translations["barrierscore_cognitive"][language] }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ barrierscore.keyboard }} / 25</td>
+                <td>{{ barrierscore.magnification }} / 25</td>
+                <td>{{ barrierscore.screenreader }} / 25</td>
+                <td>{{ barrierscore.cognitive }} / 25</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p class="barrier-score-note">
+    {{ translations["barrierscore_note"][language] }}
+</p>

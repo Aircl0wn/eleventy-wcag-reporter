@@ -55,13 +55,13 @@
     "en": "WCAG criterion",
     "nl": "WCAG criterium"
   },
-  "severity": {
-    "en": "Severity",
-    "nl": "Ernst"
+  "group": {
+    "en": "Group",
+    "nl": "Groep"
   },
-  "difficulty": {
-    "en": "Difficulty",
-    "nl": "Complexiteit"
+  "impact": {
+    "en": "Impact",
+    "nl": "Impact"
   },
   "executive_summary": {
     "en": "Executive summary",
@@ -92,8 +92,44 @@
     "nl": "Robuust"
   },
   "results_per_principle": {
-    "en": "Results by principle",
-    "nl": "Resultaten per principe"
+    "en": "Results by WCAG principle",
+    "nl": "Resultaten per WCAG principe"
+  },
+  "barrierscore": {
+    "en": "Nomensa Barrier Score",
+    "nl": "Nomensa Barrièrescore"
+  },
+  "barrierscore_table_label": {
+    "en": "Nomensa Barrier score breakdown",
+    "nl": "Nomensa Barrièrescore verdeling"
+  },
+  "barrierscore_explanation": {
+    "en": "The Nomensa Barrier Score is the estimated chance of someone with a disability hitting a significant barrier while using the website.",
+    "nl": "De barrièrescore is een indicatie van de waarschijnlijkheid dat een bezoeker op een barrière stuit, waardoor hij de website niet volledig kan gebruiken."
+  },
+  "barrierscore_note": {
+    "en": "Note: The Nomensa Barrier Score is the combined total of the individual groups (scored out of 25). Scores our based on the issues encoutered during the audit combined with our expert experience. A higher percentage score means there is a bigger likelyhood of someone with a disability encountering a significant barrier.",
+    "nl": "Opmerking: De Nomensa Barrièrescore is het gecombineerde totaal van de afzonderlijke groepen (gescoord uit 25). De scores zijn gebaseerd op de problemen die tijdens de audit zijn gevonden, gecombineerd met onze deskundige ervaring. Een hogere score betekent dat de kans groter is dat iemand met een beperking op een belangrijke belemmering stuit."
+  },
+  "barrierscore_keyboard": {
+    "en": "Keyboard",
+    "nl": "Toetsenbord"
+  },
+  "barrierscore_magnification": {
+    "en": "Magnification and Contrast",
+    "nl": "Vergroting en Contrast"
+  },
+  "barrierscore_screenreader": {
+    "en": "Screen reader",
+    "nl": "Hulpsoftware"
+  },
+  "barrierscore_cognitive": {
+    "en": "Deafness and Cognitive",
+    "nl": "Gehoor en Cognitief"
+  },
+  "issuelist_no_issues": {
+    "en": "There were no findings in this category",
+    "nl": "Er waren geen problemen in deze categorie"
   },
   "passed": {
     "en": "Passed",
@@ -131,13 +167,13 @@
     "en": "The audited web page relies on the following technologies: ",
     "nl": "De onderzochte maakt gebruik van de volgende technologieën: "
   },
-  "tip": {
-    "en": "Tip",
-    "nl": "Tip"
+  "best_practice": {
+    "en": "Best Practice",
+    "nl": "Best Practice"
   },
-  "tips": {
-    "en": "Tips",
-    "nl": "Tips"
+  "best_practices": {
+    "en": "Best practices",
+    "nl": "Best practices"
   },
   "external_link": {
     "en": "external link",
