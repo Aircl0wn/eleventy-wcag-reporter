@@ -13,7 +13,7 @@
     {% for issue in currentIssueList %}
         {% if issue.fileSlug !== page.fileSlug %}
             <article class="issue">
-                <h4 id="{{ issue.data.title  | slugify }}" data-issue="{{ translations.issue[language] }}" class="issue-title">{{ issue.data.title }}</h4>
+                <h4 id="{{ issue.data.title  | slugify }}" data-issue="{{ translations.issue[language] }}" class="issue-title">{{ issue.data.title }} ({{ issue.data.sc | sc_level(evaluation.targetWcagVersion, language) }})</h4>
                 {{ issue.templateContent | safe }}
 
                 <div class="issue-meta">

@@ -6,6 +6,7 @@ const scTable = require("./src/_utils/scTable.js");
 const sampleImage = require("./src/_utils/sampleImage.js");
 const scUri = require("./src/_utils/scUri.js");
 const scName = require("./src/_utils/scName.js");
+const scLevel = require("./src/_utils/scLevel.js");
 const slugify = require("./src/_utils/slugify.js");
 
 const reportsFolderRelative = 'src/reports';
@@ -25,6 +26,7 @@ const sanitizeNumber = (numberWithDots) => {
 module.exports = (function(eleventyConfig) {
   eleventyConfig.addFilter("sc_uri", scUri);
   eleventyConfig.addFilter("sc_name", scName);
+  eleventyConfig.addFilter("sc_level", scLevel);
  
   eleventyConfig.addFilter("slugify", slugify);
 
@@ -120,7 +122,7 @@ module.exports = (function(eleventyConfig) {
   
   // create a collection of “best practice” specific to each report (all issues with sc set to "none")
   for (let i=0; i < reports.length; i++) {
-    eleventyConfig.addCollection(`${reports[i]}-bp`, function (collectionApi) {
+    eleventyConfig.addCollection(`${reports[i]}-bestpractice`, function (collectionApi) {
       return collectionApi
         .getFilteredByGlob(`${reportsFolderRelative}/${reports[i]}/best-practice/*.md`)
         .filter(item => !(item.data.sc === "none") && !(item.data.sc === undefined))
