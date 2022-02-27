@@ -21,7 +21,8 @@ h3 {
     color: #930369;
 }
 
-h4 {
+h4,
+h5 {
     color: #e60077;
     font-size: 18pt;
 }
@@ -246,7 +247,7 @@ code {
 
 .table-wrap {
     max-width: 100%;
-    overflow-y: scroll;
+    overflow-x: auto;
 }
 
 table {

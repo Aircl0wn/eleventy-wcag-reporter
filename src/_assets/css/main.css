@@ -9,6 +9,11 @@ body {
   font-family: "Museo Sans", "Georgia", serif;
 }
 
+@media screen and (max-width: 50em) {
+  body {
+    padding: 0 1em;
+  }    
+}
 .report-list {
   padding: 0;
 }
