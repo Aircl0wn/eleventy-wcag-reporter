@@ -46,7 +46,7 @@ module.exports = (function(eleventyConfig) {
   for (let i=0; i < reports.length; i++) {
     eleventyConfig.addCollection(reports[i], function (collectionApi) {
       return collectionApi
-      .getFilteredByGlob(`${reportsFolderRelative}/${reports[i]}/**/*.md`)
+      .getFilteredByGlob(`${reportsFolderRelative}/${reports[i]}/issues/*.md`)
       .filter(item => !(item.data.sc === "none") && !(item.data.sc === undefined))
       .sort((a, b) => {
         const numbA = sanitizeNumber(a.data.sc);
