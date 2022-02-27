@@ -56,9 +56,16 @@ module.exports = (function(eleventyConfig) {
   for (let i=0; i < reports.length; i++) {
     eleventyConfig.addCollection(`${reports[i]}-tips`, function (collectionApi) {
       return collectionApi
-        .getFilteredByGlob(`${reportsFolderRelative}/${reports[i]}/**/*.md`)
-        .filter(item => (item.data.sc === "none"))
-    });
+        .getFilteredByGlob(`${reportsFolderRelative}/${reports[i]}/tips/*.md`)
+        .filter(item => !(item.data.sc === "none") && !(item.data.sc === undefined))
+        .sort((a, b) => {
+          const numbA = sanitizeNumber(a.data.sc);
+          const numbB = sanitizeNumber(b.data.sc);
+          if (numbA < numbB) return -1;
+          if (numbA > numbB) return 1;
+          return 0;
+        });
+      });
   }
 
   // Base Config
