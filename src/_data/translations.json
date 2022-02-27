@@ -51,6 +51,18 @@
     "en": "Issues",
     "nl": "Bevindingen"
   },
+  "finding": {
+    "en": "Finding",
+    "nl": "Bevinding"
+  },
+  "findings": {
+    "en": "Findings",
+    "nl": "Bevindingen"
+  },
+  "findings_overview": {
+    "en": "Findings Overview",
+    "nl": "Overzicht bevindingen"
+  },
   "wcag_criterion": {
     "en": "WCAG criterion",
     "nl": "WCAG criterium"

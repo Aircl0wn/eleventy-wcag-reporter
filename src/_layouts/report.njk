@@ -115,8 +115,35 @@ layout: base
     </ul>
   </section>
 
-  <h2>{{ translations.issues[language] }}</h2>
+  <section id="issues-index">
+    <h2>{{ translations["findings_overview"][language] }}</h2>
+    <h3>{{ translations["issues"][language] }}</h3>
+    {% if issueList.length == '0' %}
+      <p>
+        {{ translations["issuelist_no_issues"][language] }}
+      </p>
+    {% else %}
+      <ol class="issue-list">
+        {% for issue in issueList %}
+          {% if issue.fileSlug !== page.fileSlug %}
+              <li><a href="#{{ issue.data.title  | slugify }}">{{ issue.data.title }}</a> ({{ issue.data.sc | sc_name(evaluation.targetWcagVersion, language) }})</li>
+          {% endif %}
+        {% endfor %}  
+      </ol>
+    {% endif %}
+    {% if bpList.length %}
+      <h3>{{ translations["best_practices"][language] }}</h3>
+      <ol>
+      {% for issue in bpList %}
+        {% if issue.fileSlug !== page.fileSlug %}
+        <li><a href="#{{ issue.data.title  | slugify }}">{{ issue.data.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+      </ol>
+    {% endif %}
+  </section>
 
+  <h2>{{ translations.findings[language] }}</h2>
   <section id="issues-keyboard">
     <h3>{{ translations["barrierscore_keyboard"][language] }}</h3>
     {% set currentIssueList = issueListKeyboard %}
@@ -144,13 +171,6 @@ layout: base
   {% if bpList.length %}
     <section id="best-pracites">
       <h2>{{ translations.best_practices[language] }}</h2>
-      <ol>
-      {% for issue in bpList %}
-        {% if issue.fileSlug !== page.fileSlug %}
-        <li><a href="#{{ issue.data.title  | slugify }}">{{ issue.data.title }}</a></li>
-        {% endif %}
-      {% endfor %}
-      </ol>
       {% for issue in bpList %}
         {% if issue.fileSlug !== page.fileSlug %}
         <article class="issue">

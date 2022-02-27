@@ -1,19 +1,9 @@
-{% if currentIssueList.length == '0' %}
-    <p>
-      {{ translations["issuelist_no_issues"][language] }}
-    </p>
-{% else %}
-    <ol class="issue-list">
-        {% for issue in currentIssueList %}
-            {% if issue.fileSlug !== page.fileSlug %}
-                <li><a href="#{{ issue.data.title  | slugify }}">{{ issue.data.title }}</a> ({{ issue.data.sc}})</li>
-            {% endif %}
-        {% endfor %}  
-    </ol>
+{% if currentIssueList.length != '0' %}
     {% for issue in currentIssueList %}
         {% if issue.fileSlug !== page.fileSlug %}
             <article class="issue">
-                <h4 id="{{ issue.data.title  | slugify }}" data-issue="{{ translations.issue[language] }}" class="issue-title">{{ issue.data.title }} ({{ issue.data.sc | sc_level(evaluation.targetWcagVersion, language) }})</h4>
+                <h4 id="{{ issue.data.title  | slugify }}" data-issue="{{ translations.issue[language] }}" class="issue-title">{{ issue.data.title }}
+                <span class="issue-title-sc">{{ issue.data.sc | sc_name(evaluation.targetWcagVersion, language) }} ({{ issue.data.sc | sc_level(evaluation.targetWcagVersion, language) }})</span></h4>
                 {{ issue.templateContent | safe }}
 
                 <div class="issue-meta">

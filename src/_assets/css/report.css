@@ -13,6 +13,7 @@ h2 {
     break-before: page;
     font-size: 24pt;
     color: #e60077;
+    border-bottom: 4px solid currentColor;
 }
 
 h3 {
@@ -119,6 +120,7 @@ code {
     padding: .75rem 1em;
     color: #930369;
     background-color: #d5048c10;
+    border-bottom: 4px solid currentColor;
 }
 
 .issue-title::before {
@@ -134,11 +136,20 @@ code {
     margin-bottom: .4em;
 }
 
+.issue-title-sc {
+    display: block;
+    margin-top: .5em;
+    font-size: 0.6em;
+}
+
 .issue-meta {
     margin: 2em -1em -1em -1em;
     background-color: #d5048c10;
     padding: 0.5em 1em;
+    color: #930369;
     border-radius: 0.25em;
+    border-top: 4px solid currentColor;
+
 }
 
 .issue-meta dl {
