@@ -291,17 +291,46 @@ th {
 @media print {
     h1 {
         string-set: doctitle content();
+        font-size: 24pt;
     }
-    body {
+    
+    h2 {
+        font-size: 18pt;
+    }
+    
+    h3 {
+        font-size: 16pt;
+    }
+
+    h4,
+    h5 {
+        font-size: 14pt;
+    }
+    p {
         font-size: 12pt;
     }
+
     .cover-page {
         color: white;
     }
+
+    .findings-heading {
+        break-after: avoid;
+    }
+    .best-practice-heading + .issue,
+    .group-heading.first,
+    .group-heading + .issue {
+        break-before: avoid;
+    }
+
+    .group-heading {
+        break-before: page;
+        break-after: avoid;
+    }
+
     .issue {
         border: 0;
         padding: 0;
-        break-before: page;
     }
     .issue-meta a {
         color: #930369;

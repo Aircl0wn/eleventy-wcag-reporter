@@ -116,7 +116,7 @@ layout: base
   </section>
 
   <section id="issues-index">
-    <h2>{{ translations["findings_overview"][language] }}</h2>
+    <h2>{{ translations["overview"][language] }}</h2>
     <h3>{{ translations["issues"][language] }}</h3>
     {% if issueList.length == '0' %}
       <p>
@@ -143,34 +143,34 @@ layout: base
     {% endif %}
   </section>
 
-  <h2>{{ translations.findings[language] }}</h2>
+  <h2 class="findings-heading">{{ translations.findings[language] }}</h2>
   <section id="issues-keyboard">
-    <h3>{{ translations["barrierscore_keyboard"][language] }}</h3>
+    <h3 class="group-heading first">{{ translations["barrierscore_keyboard"][language] }}</h3>
     {% set currentIssueList = issueListKeyboard %}
     {% include '../_layouts/issuelist.njk' %}
   </section>
 
   <section id="issues-magnification">
-    <h3>{{ translations["barrierscore_magnification"][language] }}</h3>
+    <h3 class="group-heading">{{ translations["barrierscore_magnification"][language] }}</h3>
     {% set currentIssueList = issueListMagnification %}
     {% include '../_layouts/issuelist.njk' %}
   </section>
 
   <section id="issues-screenreader">
-    <h3>{{ translations["barrierscore_screenreader"][language] }}</h3>
+    <h3 class="group-heading">{{ translations["barrierscore_screenreader"][language] }}</h3>
     {% set currentIssueList = issueListScreenreader %}
     {% include '../_layouts/issuelist.njk' %}
   </section>
 
   <section id="issues-cognitive">
-    <h3>{{ translations["barrierscore_cognitive"][language] }}</h3>
+    <h3 class="group-heading">{{ translations["barrierscore_cognitive"][language] }}</h3>
     {% set currentIssueList = issueListCognitive %}
     {% include '../_layouts/issuelist.njk' %}
   </section>
 
   {% if bpList.length %}
     <section id="best-pracites">
-      <h2>{{ translations.best_practices[language] }}</h2>
+    <h2 class="best-practice-heading">{{ translations.best_practices[language] }}</h2>
       {% for issue in bpList %}
         {% if issue.fileSlug !== page.fileSlug %}
         <article class="issue">

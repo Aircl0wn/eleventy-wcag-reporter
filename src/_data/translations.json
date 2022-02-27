@@ -59,9 +59,9 @@
     "en": "Findings",
     "nl": "Bevindingen"
   },
-  "findings_overview": {
-    "en": "Findings Overview",
-    "nl": "Overzicht bevindingen"
+  "overview": {
+    "en": "Overview",
+    "nl": "Overzicht"
   },
   "wcag_criterion": {
     "en": "WCAG criterion",
