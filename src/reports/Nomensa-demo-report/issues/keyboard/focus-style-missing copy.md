@@ -1,13 +1,22 @@
 ---
-title: Focus style missing
+title: Sample issue
+
 sc: 2.4.7
-impact: High
+
+# Properties (lowercase!)
+# keyboard / magnification / screenreader / cognitive
+group: keyboard
+
+# minor / moderate / severe / blocker
+impact: Blocker
+
 sample: all
 ---
 
-![alt text](images/default-screenshot.png)
+![test](images/001.jpg)
+![alt text](images/002.jpg)
 
-#### Problem
+##### Problem
 
 Focus styles have been removed through the website's stylesheets:
 
@@ -19,10 +28,10 @@ Focus styles have been removed through the website's stylesheets:
 
 This causes problems for people who use the website without a mouse, as they will not be able to see where they are.
 
-#### Solution
+##### Solution
 
 Remove the `outline: none` rule, and/or add a specific style that applies on `:focus`. Make sure that it has sufficient contrast, too.
 
-#### Read more
+##### Documentation
 
 - [Indicating focus to improve accessibility](https://hiddedevries.nl/en/blog/2019-06-06-indicating-focus-to-improve-accessibility)
