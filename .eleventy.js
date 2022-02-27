@@ -1,12 +1,15 @@
 const fs = require('fs')
 const path = require('path')
 const markdownShortcode = require("eleventy-plugin-markdown-shortcode");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const scTable = require("./src/_utils/scTable.js");
 const sampleImage = require("./src/_utils/sampleImage.js");
 const scUri = require("./src/_utils/scUri.js");
 const scName = require("./src/_utils/scName.js");
 const slugify = require("./src/_utils/slugify.js");
+const codeblocks = require('@code-blocks/eleventy-plugin')
+// some renderers
+const charts = require('@code-blocks/charts')
+const prism = require('@code-blocks/prism')
 
 const reportsFolderRelative = 'src/reports';
 const reportsFolder = path.join(__dirname, reportsFolderRelative)
@@ -34,7 +37,10 @@ module.exports = (function(eleventyConfig) {
   eleventyConfig.addLayoutAlias("report", "report.njk");
 
   eleventyConfig.addPlugin(markdownShortcode);
-  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(codeblocks([
+    charts,
+    prism,
+  ]))
   
   // create a collection of issues specific to each report, sorted by success criterion
   for (let i=0; i < reports.length; i++) {
