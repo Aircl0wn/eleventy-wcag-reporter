@@ -1,11 +1,10 @@
 ---
 title: Sample issue
-
-sc: 2.4.7
+sc: 1.2.5
 
 # Properties (lowercase!)
 # keyboard / magnification / screenreader / cognitive
-group: keyboard
+group: screenreader
 
 # minor / moderate / severe / blocker
 impact: Blocker
